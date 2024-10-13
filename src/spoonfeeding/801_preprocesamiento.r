@@ -265,7 +265,8 @@ setwd("~/buckets/b1/") # Establezco el Working Directory
 # cargo el dataset donde voy a entrenar el modelo
 dataset <- fread(PARAM$input$dataset)
 
-dataset = subset(dataset, select = -c("cprestamos_personales","mprestamos_personales") ) 
+dataset[, c("cprestamos_personales","mprestamos_personales"):=NULL]
+
 
 # creo la carpeta donde va el experimento
 dir.create("./exp/", showWarnings = FALSE)
