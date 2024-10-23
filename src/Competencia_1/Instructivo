@@ -1,0 +1,25 @@
+Instructivo de competencia 1
+ 
+-Correr la notebook de python Clase_ternaria.ipynb reemplazando la ruta por la correspondiente al dataset crudo. Se genera el archivo con la clase ternaria competancia_01.csv
+
+-Copiar ese archivo en un bucket de google cloud y ejecutar en la nube los siguientes archivos de R con una maquina virtual con 128  gb de ram (creada a partir del tamplate del instructivo)
+
+Se corrieron los siguientes 3 programas
+
+- 801_preprocesamiento.r
+Se siguio la estreategia propuesta en la catedra de eliminar el campo con concept drifting (cprestamos_personales","mprestamos_personales") y se realizaron preprocesamiento como calculo de lags y delta lags. No se considera oversampling ni correccion drifting.
+
+- 802_light_gbm_binaria_BO.r
+Optimizacion bayesiana, entrenando en los meses 02 y 03 y testeando 04. 
+
+- 803_light_final.r
+Se genera la prediccion.
+
+Con respecto a la eleccion de la semilla se considero una sola semilla 571741 (primera mia) con un corte analizado cualitativamente de cual era mejor. 
+No considero que haya un criterio muy razonable para elegir una semilla por sobre otra.
+
+La prediccion que genera el 803_light_final tomada en kaggle fue del archivo:
+exp_KA8030_KA8030_1_564061_12000.csv
+
+
+
