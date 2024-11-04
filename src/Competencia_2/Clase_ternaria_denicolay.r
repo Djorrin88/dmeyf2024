@@ -56,4 +56,5 @@ fwrite( dataset,
         sep = ","
 )
 
+write.csv(dataset, file=gzfile("competencia_02.csv.gz"))
 
