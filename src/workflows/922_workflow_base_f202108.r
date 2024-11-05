@@ -430,7 +430,7 @@ wf_prueba_1<- function( pnombrewf )
   # Etapas preprocesamiento
   CA_catastrophe_base( metodo="MachineLearning")
   FEintra_manual_base()
-  DR_drifting_base(metodo="dolar_blue")
+  DR_drifting_base(metodo="rank_cero_fijo")
   FEhist_base()
 
   FErf_attributes_base( arbolitos= 20,
