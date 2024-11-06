@@ -2,6 +2,7 @@
 904 incluimos delta lag 2 
 905 incluimos delta lag 3
 907 dolar blue
-908 dataset corrigo- modelo base
-909 dataset corregido modelo base-dolar blue drifting
-
+922 dataset corrigo- modelo base
+923 dataset corregido modelo base-dolar blue drifting
+924 dataset corregido modelo sin prestamos personal
+925 dataset corregido normal drift
