@@ -15,11 +15,16 @@ dataset <- read.csv(gzfile("competencia_02.csv.gz"))
 # Sample dataset
 set.seed(123)
 
-data_08 <- dataset  # Using the first 4 columns of the iris dataset as an example
+data_08 <- dataset[dataset$foto_mes == "202108", ]  # Using the first 4 columns of the iris dataset as an example
 target <- iris$Species
 
 # New vector to calculate proximity with
 new_vector <- data.frame(Sepal.Length = 5.1, Sepal.Width = 3.5, Petal.Length = 1.4, Petal.Width = 0.2)
+
+
+# Entrenar el modelo Random Forest en modo no supervisado con proximidad activada
+set.seed(123)
+rf_model <- randomForest(data, proximity = TRUE, ntree = 500)
 
 # Append the new vector to the original dataset
 data_combined <- rbind(data, new_vector)
