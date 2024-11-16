@@ -17,6 +17,19 @@ dataset <- read.csv(gzfile("competencia_02.csv.gz"))
 # Sample dataset
 set.seed(123)
 
+
+# Vector a mapear
+
+# Definir el "diccionario" como un vector nombrado
+mapping <- c("a" = 1, "b" = 2, "c" = 3, "d" = 4)
+
+# Aplicar el mapeo usando el vector nombrado
+mapped_vec <- mapping[vec]
+print(mapped_vec)
+
+
+
+
 data_08 <- dataset[dataset$foto_mes == "202108", ]  # Using the first 4 columns of the iris dataset as an example
 
 data_07 <- dataset[dataset$foto_mes == "202107", ] 
