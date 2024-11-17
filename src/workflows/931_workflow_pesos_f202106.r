@@ -444,12 +444,13 @@ wf_prueba_1<- function( pnombrewf )
   #CN_canaritos_asesinos_base(ratio=0.2, desvio=4.0)
 
   # Etapas modelado
-  ts8 <- TS_strategy_base8()
+  ts6 <- TS_strategy_base8()
   ht <- HT_tuning_base( bo_iteraciones = 40 )  # iteraciones inteligentes
 
   # Etapas finales
-  fm <- FM_final_models_lightgbm( c(ht, ts8), ranks=c(1), qsemillas=20 )
-  SC_scoring( c(fm, ts8) )
+  fm <- FM_final_models_lightgbm( c(ht, ts6), ranks=c(1), qsemillas=20 )
+  SC_scoring( c(fm, ts6) )
+  EV_evaluate_conclase_gan() # evaluacion contra mes CON clase
   KA_evaluate_kaggle()  # genera archivos para Kaggle
 
   return( exp_wf_end() ) # linea workflow final fija
