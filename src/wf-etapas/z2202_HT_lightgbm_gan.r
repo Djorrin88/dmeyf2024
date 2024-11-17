@@ -504,9 +504,7 @@ dtrain <- lgb.Dataset(
   data = data.matrix(dataset[fold_train == 1, campos_buenos, with = FALSE]),
   label = dataset[fold_train == 1, clase01],
   weight = dataset[
-    fold_train == 1,
-    "pesos" 
-  ],
+    fold_train == 1,pesos],
   free_raw_data = FALSE
 )
 
