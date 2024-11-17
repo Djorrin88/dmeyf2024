@@ -1,5 +1,5 @@
 #!/usr/bin/env Rscript
-cat( "ETAPA  z2201_HT_lightgbm_gan.r  INIT\n")
+cat( "ETAPA  z2202_HT_lightgbm_gan.r  INIT\n")
 
 # Hyperparameter Tuning  lightgbm
 
@@ -676,4 +676,4 @@ file.remove("z-Rcanresume.txt")
 #  archivos tiene a los files que debo verificar existen para no abortar
 
 action_finalizar( archivos = c("BO_log.txt")) 
-cat( "ETAPA  z2201_HT_lightgbm_gan.r  END\n")
+cat( "ETAPA  z2202_HT_lightgbm_gan.r  END\n")

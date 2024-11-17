@@ -218,4 +218,4 @@ GrabarOutput()
 #  archivos tiene a los files que debo verificar existen para no abortar
 
 action_finalizar( archivos = archivos_salida) 
-cat( "ETAPA  z2101_TS_training_strategy.r  END\n" )
+cat( "ETAPA  z2102_TS_training_strategy.r  END\n" )
