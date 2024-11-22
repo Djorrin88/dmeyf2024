@@ -8,3 +8,6 @@
 925 dataset corregido normal drift
 929 dataset agregando pesos en TS
 930 agregamos pesos a Bayesiana, probamos modelo base no extendido.
+
+992 undersampling como antes
+

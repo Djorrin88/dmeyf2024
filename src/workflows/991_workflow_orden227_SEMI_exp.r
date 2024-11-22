@@ -101,7 +101,7 @@ FEintra_manual_base <- function( pinputexps )
   if( -1 == (param_local <- exp_init())$resultado ) return( 0 ) # linea fija
 
 
-  param_local$meta$script <- "/src/wf-etapas/1301_FE_intrames_manual_exp1.r"
+  param_local$meta$script <- "/src/wf-etapas/1301_FE_intrames_manual_SEMI_exp1.r"
 
   param_local$semilla <- NULL  # no usa semilla, es deterministico
 
