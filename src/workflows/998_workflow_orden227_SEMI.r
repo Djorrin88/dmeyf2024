@@ -13,8 +13,8 @@ if( !exists("envg") ) envg <- env()  # global environment
 
 envg$EXPENV <- list()
 envg$EXPENV$bucket_dir <- "~/buckets/b1"
-envg$EXPENV$exp_dir <- "~/buckets/b1/expw227_sin_03_04/"
-envg$EXPENV$wf_dir <- "~/buckets/b1/flow227_sin_03_04/"
+envg$EXPENV$exp_dir <- "~/buckets/b1/expw227_RF/"
+envg$EXPENV$wf_dir <- "~/buckets/b1/flow227_RF/"
 envg$EXPENV$repo_dir <- "~/dmeyf2024/"
 envg$EXPENV$datasets_dir <- "~/buckets/b1/datasets/"
 envg$EXPENV$messenger <- "~/install/zulip_enviar.sh"
@@ -183,7 +183,7 @@ FErf_attributes_base <- function( pinputexps, ratio, desvio)
   # parametros para que LightGBM se comporte como Random Forest
   param_local$lgb_param <- list(
     # parametros que se pueden cambiar
-    num_iterations = 20,
+    num_iterations = 25,
     num_leaves  = 16,
     min_data_in_leaf = 1000,
     feature_fraction_bynode  = 0.2,
@@ -292,17 +292,17 @@ TS_strategy_base8 <- function( pinputexps )
 {
   if( -1 == (param_local <- exp_init())$resultado ) return( 0 )# linea fija
 
-  param_local$meta$script <- "/src/wf-etapas/2102_TS_training_strategy_sin_B1.r"
+  param_local$meta$script <- "/src/wf-etapas/z2101_TS_training_strategy.r"
 
   param_local$future <- c(202108)
 
   param_local$final_train$undersampling <- 0.02
   param_local$final_train$clase_minoritaria <- c( "BAJA+1", "BAJA+2")
   param_local$final_train$training <- c(
-    202106, 202105, 202102, 202101, 
+    202106, 202105, 202104, 202103, 202102, 202101, 
     202012, 202011, 202010, 202009, 202008, 202007, 
     # 202006  Excluyo por variables rotas
-    202005,202004, 202003, 202002, 202001,
+    202005, 202004, 202003, 202002, 202001,
     201912, 201911,
     # 201910 Excluyo por variables rotas
     201909, 201908, 201907, 201906,
@@ -315,10 +315,10 @@ TS_strategy_base8 <- function( pinputexps )
   param_local$train$validation <- c(202105)
 
   param_local$train$training <- c(
-    202102, 202101, 
+    202104, 202103, 202102, 202101, 
     202012, 202011, 202010, 202009, 202008, 202007, 
     # 202006  Excluyo por variables rotas
-    202005,202004, 202003, 202002, 202001,
+    202005, 202004, 202003, 202002, 202001,
     201912, 201911,
     # 201910 Excluyo por variables rotas
     201909, 201908, 201907, 201906,
