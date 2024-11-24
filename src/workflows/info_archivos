@@ -19,3 +19,9 @@
 1000 base con RF 202103, 202104, 202105 sin pandemia
 1001 con TS de pesos de denicolay
 1002 base sin marzo abril 2020 y 2021
+1003 base sin marzo abril 2020 y 2021 exp
+1004 base sin marzo-abril 2021 + RF 
+1005 base sin marzo-abril 2021 + RF - prestamos persnarl
+1006 base sin marzo-abril 2021 + RF + tendencia 2do orden
+1007base sin marzo-abril 2021 solo en train pero no final_train. + RF 
+
