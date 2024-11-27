@@ -13,8 +13,8 @@ if( !exists("envg") ) envg <- env()  # global environment
 
 envg$EXPENV <- list()
 envg$EXPENV$bucket_dir <- "~/buckets/b1"
-envg$EXPENV$exp_dir <- "~/buckets/b1/expw_competencia_3/"
-envg$EXPENV$wf_dir <- "~/buckets/b1/flow_competencia_3/"
+envg$EXPENV$exp_dir <- "~/buckets/b1/expw_competencia_3_sin_B1/"
+envg$EXPENV$wf_dir <- "~/buckets/b1/flow_competencia_3_sin_B1/"
 envg$EXPENV$repo_dir <- "~/dmeyf2024/"
 envg$EXPENV$datasets_dir <- "~/buckets/b1/datasets/"
 envg$EXPENV$messenger <- "~/install/zulip_enviar.sh"
@@ -261,7 +261,7 @@ TS_strategy_base8 <- function( pinputexps )
 {
   if( -1 == (param_local <- exp_init())$resultado ) return( 0 )# linea fija
 
-  param_local$meta$script <- "/src/wf-etapas/z2101_TS_training_strategy.r"
+  param_local$meta$script <- "/src/wf-etapas/2102_TS_training_strategy_sin_B1.r"
 
   param_local$future <- c(202108)
 
