@@ -1,0 +1,10 @@
+Se adjunta en la carpeta los siguientes scripts: 
+1) Clase_ternaria_denicolay.r 
+   Calcula la clase ternaria y la incluye en el dataset
+   
+2) 2102_TS_training_strategy_sin_B1.r en wf-etapas
+   Se modifica el archivo del workflow para eliminar la clase BAJA+1 de train y final-train
+   
+3)  run_workflow.r
+    997_workflow_orden227_SEMI.r
+Se ejecuta el modelo base semillero con la modificación de no considerar BAJA+1 y TS.
