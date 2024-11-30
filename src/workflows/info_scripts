@@ -4,6 +4,6 @@
 1103 modelo semillero base sin pandemia 132, 134, 133, 133
 1104 modemo semillero base sin baja+1 119, 126, 125, 130
 1105 modelo semillero base sumando tendencias de segundo orden semi-full (probar con 256 gb ram)
-1106 base sin baja +1 sin mes 03 y 04 del 2021 (modelo utilizado en competencia 2)
-1107 base cambiando TS, solo considerando en final train ultimo 2020-2021 sin 03 y 04 2021.
+1106 base sin baja +1 sin mes 03 y 04 del 2021 (modelo utilizado en competencia 2) 133. 131.7 128.9 132.4
+1107 base cambiando TS, solo considerando en final train ultimo 2020-2021 sin 03 y 04 2021. 124 124 124 122 
 
