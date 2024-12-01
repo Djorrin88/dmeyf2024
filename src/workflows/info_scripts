@@ -6,11 +6,13 @@
 1105 modelo semillero base sumando tendencias de segundo orden semi-full (probar con 256 gb ram) 130, 135, 137,139
 1106 base sin baja +1 sin mes 03 y 04 del 2021 (modelo utilizado en competencia 2) 133. 131.7 128.9 132.4
 1107 base cambiando TS, solo considerando en final train ultimo 2020-2021 sin 03 y 04 2021. 124 124 124 122 
-1108 base dejando solo los ultimos 8 meses de train y final train (para semillero hibrido) 
+1108 base dejando solo los ultimos 8 meses de train y final train (para semillero hibrido)  122, 125, 120, 122
 1109 modelos semillero base sumando segundo orden tendencia , cambiando 0.2 underfitting. 138 141 139 140 143 133
 1110 base dejando primero 8 meses y los ultimos 3 meses (para semillero hibrido) 123 119 121 120
 1111 base con  sumando tendencias de segundo orden tendencia 3 deltas  132 134 135 133 136 135 132
-1112 base semillero base sumando segundo orden semi-full , cambiando 0.2 underfitting.
+1112 base semillero base sumando segundo orden semi-full , cambiando 0.2 underfitting. (probar 256 ram) 136 134 129 128 131 129 130
 1113 base dejando 6 meses iniciales y 6 meses finales 0.2 underfitting (para semillaro hibrido)
 1114 base sin lags tendencias full segundo orden sin random forest. (para semillero hibrido)
+1115 modelos semillero base sumando segundo orden tendencia , cambiando 0.2 underfitting + RF modificacion meses y num_ite
+1116
 
