@@ -14,7 +14,8 @@
 1113 base dejando 6 meses iniciales y 6 meses finales 0.2 underfitting (para semillaro hibrido) 128 133 136 140
 1114 base sin lags tendencias full segundo orden sin random forest. (para semillero hibrido) 125, 125, 124, 126
 1115 modelos semillero base sumando segundo orden tendencia , cambiando 0.2 underfitting + RF modificacion meses y num_ite 130 134 135 135 136 133 131 
-1116 Repetimos el 1109 con otra semilla
-1117 base semillero base sumando segundo orden semi-full , cambiando 0.2 underfitting + sin B+1
+1116 Repetimos el 1109 con otra semilla 127, 132, 135, 133, 125, 127, 131 
+1117 base semillero base sumando segundo orden semi-full , cambiando 0.2 underfitting + sin B+1 121, 125.9 125 124 126 126 125
 1118 modelos semillero base sumando segundo orden tendencia , cambiando 0.2 underfitting + exponencial 0.96
-
+1119 modelo base con TS de denicolay
+1120 modelo 1109 con TS de denicolay
