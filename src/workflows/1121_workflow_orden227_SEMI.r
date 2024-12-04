@@ -13,8 +13,8 @@ if( !exists("envg") ) envg <- env()  # global environment
 
 envg$EXPENV <- list()
 envg$EXPENV$bucket_dir <- "~/buckets/b1"
-envg$EXPENV$exp_dir <- "~/buckets/b1/expw_competencia_3_TS_LM/"
-envg$EXPENV$wf_dir <- "~/buckets/b1/flow_competencia_3_TS_LM/"
+envg$EXPENV$exp_dir <- "~/buckets/b1/expw_competencia_3_NEW_LM/"
+envg$EXPENV$wf_dir <- "~/buckets/b1/flow_competencia_3_NEW_LM/"
 envg$EXPENV$repo_dir <- "~/dmeyf2024/"
 envg$EXPENV$datasets_dir <- "~/buckets/b1/datasets/"
 envg$EXPENV$messenger <- "~/install/zulip_enviar.sh"
@@ -301,28 +301,28 @@ TS_strategy_base8 <- function( pinputexps )
   param_local$final_train$training <- c(
     202107,202106, 202105, 202104, 202103, 202102, 202101, 
     202012, 202011, 202010, 202009, 202008, 202007, 
-    #202006,#  Excluyo por variables rotas
+    # 202006  Excluyo por variables rotas
     202005, 202004, 202003, 202002, 202001,
     201912, 201911,
-    #201910, # Excluyo por variables rotas
+    # 201910 Excluyo por variables rotas
     201909, 201908, 201907, 201906,
-     #201905,#  Excluyo por variables rotas
+    # 201905  Excluyo por variables rotas
     201904, 201903
   )
 
 
   param_local$train$testing <- c(202107)
-  param_local$train$validation <- c(202107)
+  param_local$train$validation <- c(202106)
 
   param_local$train$training <- c(
     202105,202104, 202103, 202102, 202101, 
     202012, 202011, 202010, 202009, 202008, 202007, 
-     #202006,  Excluyo por variables rotas
+    # 202006  Excluyo por variables rotas
     202005, 202004, 202003, 202002, 202001,
     201912, 201911,
-     #201910,# Excluyo por variables rotas
+    # 201910 Excluyo por variables rotas
     201909, 201908, 201907, 201906,
-     #201905,#  Excluyo por variables rotas
+    # 201905  Excluyo por variables rotas
     201904, 201903
   )
 
@@ -366,7 +366,7 @@ HT_tuning_semillerio <- function( pinputexps, semillerio, bo_iteraciones, bypass
   param_local$lgb_param <- list(
     boosting = "gbdt", # puede ir  dart  , ni pruebe random_forest
     objective = "binary",
-    metric = "auc",
+    metric = "custom",
     first_metric_only = TRUE,
     boost_from_average = TRUE,
     feature_pre_filter = FALSE,
@@ -394,7 +394,7 @@ HT_tuning_semillerio <- function( pinputexps, semillerio, bo_iteraciones, bypass
 
     extra_trees = FALSE,
     # Parte variable
-    learning_rate = c( 0.03 ),
+    learning_rate = c( 0.3, 0.8 ),
     feature_fraction = c( 0.05, 0.95 ),
 
     leaf_size_log = c( -10, -5),   # deriva en min_data_in_leaf
@@ -461,8 +461,8 @@ KA_evaluate_kaggle_semillerio <- function( pinputexps )
 
   param_local$irepes_submit <- 1:20 # misterioso parametro, no preguntar
 
-  param_local$envios_desde <- 9500L
-  param_local$envios_hasta <- 12550L
+  param_local$envios_desde <- 10500L
+  param_local$envios_hasta <- 12050L
   param_local$envios_salto <-   500L
   param_local$competition <- "dm-ey-f-2024-tercera"
 
@@ -486,7 +486,7 @@ wf_SEMI_1121 <- function( pnombrewf )
   #CA_catastrophe_base( metodo="MachineLearning")
   #FEintra_manual_base()
   #DR_drifting_base(metodo="rank_cero_fijo")
-  #FEhist_base()
+  FEhist_base()
   #ultimo <- FErf_attributes_base()
   #CN_canaritos_asesinos_base(ratio=0.2, desvio=4.0)
 
