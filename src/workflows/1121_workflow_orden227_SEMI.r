@@ -301,12 +301,12 @@ TS_strategy_base8 <- function( pinputexps )
   param_local$final_train$training <- c(
     202107,202106, 202105, 202104, 202103, 202102, 202101, 
     202012, 202011, 202010, 202009, 202008, 202007, 
-    202006,#  Excluyo por variables rotas
+    #202006,#  Excluyo por variables rotas
     202005, 202004, 202003, 202002, 202001,
     201912, 201911,
-    201910, # Excluyo por variables rotas
+    #201910, # Excluyo por variables rotas
     201909, 201908, 201907, 201906,
-     201905,#  Excluyo por variables rotas
+     #201905,#  Excluyo por variables rotas
     201904, 201903
   )
 
@@ -317,12 +317,12 @@ TS_strategy_base8 <- function( pinputexps )
   param_local$train$training <- c(
     202105,202104, 202103, 202102, 202101, 
     202012, 202011, 202010, 202009, 202008, 202007, 
-     202006,#  Excluyo por variables rotas
+     #202006,  Excluyo por variables rotas
     202005, 202004, 202003, 202002, 202001,
     201912, 201911,
-     201910,# Excluyo por variables rotas
+     #201910,# Excluyo por variables rotas
     201909, 201908, 201907, 201906,
-     201905,#  Excluyo por variables rotas
+     #201905,#  Excluyo por variables rotas
     201904, 201903
   )
 
@@ -366,7 +366,7 @@ HT_tuning_semillerio <- function( pinputexps, semillerio, bo_iteraciones, bypass
   param_local$lgb_param <- list(
     boosting = "gbdt", # puede ir  dart  , ni pruebe random_forest
     objective = "binary",
-    metric = "custom",
+    metric = "auc",
     first_metric_only = TRUE,
     boost_from_average = TRUE,
     feature_pre_filter = FALSE,
@@ -394,7 +394,7 @@ HT_tuning_semillerio <- function( pinputexps, semillerio, bo_iteraciones, bypass
 
     extra_trees = FALSE,
     # Parte variable
-    learning_rate = c( 0.3, 0.8 ),
+    learning_rate = c( 0.03 ),
     feature_fraction = c( 0.05, 0.95 ),
 
     leaf_size_log = c( -10, -5),   # deriva en min_data_in_leaf
