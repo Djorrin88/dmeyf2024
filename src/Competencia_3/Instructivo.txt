@@ -1,0 +1,36 @@
+Se adjunta en la carpeta los siguientes scripts para correr modelo ensamble por votación soft (promedio de probabilidades).
+
+1) Clase_ternaria_denicolay.r 
+   Calcula la clase ternaria y la incluye en el dataset
+   
+2) 2102_TS_training_strategy_sin_B1.r en wf-etapas
+   Se agrega el archivo en wf-etapas para eliminar la clase BAJA+1 de train y final-train
+   
+3) Se corren los siguientes modelos de semillero de la carpeta workflows  que se encuentra una breve explicación de cada uno en el archivo info_scripts:
+1102_workflow_orden227_SEMI.r
+1104_workflow_orden227_SEMI.r
+1105_workflow_orden227_SEMI.r
+1107_workflow_orden227_SEMI.r
+1108_workflow_orden227_SEMI.r
+1109_workflow_orden227_SEMI.r
+1110_workflow_orden227_SEMI.r
+1111_workflow_orden227_SEMI.r
+1112_workflow_orden227_SEMI.r
+1113_workflow_orden227_SEMI.r
+1114_workflow_orden227_SEMI.r
+1116_workflow_orden227_SEMI.r
+
+y luego se corrio el scrips de la linea de muerte lineademuerte_k03.ipynb para 10 semillas , creando la carpeta con el nombre semilla correspondiente de modo de guardar las probabilidades del mes a predecir en la carpeta. En cada corrida se modificó el nombre de la semilla y la carpeta. Se utilizaron las siguientes semillas:
+
+102191, 573761, 601043, 999991, 571741, 603401, 232197, 372191, 702191, 777711
+
+4) Finalmente se ejecuta el script Semillero_hibrido_final.ipynb para generar el promedio de las probabilidades con 12 modelos semillero + 10 modelos linea de muerte y se escogio el corte 11000.
+
+5) Se adjunta tambien los scripts Semillero_hibrido_2.ipynb y Semillero_linea_de_muerte.ipynb para realizar los ensambles para los modelos semilleros o linea de muerte por separado. 
+
+
+
+
+
+ 
+
